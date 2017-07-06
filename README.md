@@ -1,8 +1,8 @@
-#encore-require-assets-helper
+# encore-require-assets-helper
 
 Creates .js file which requires all suitable files in folder. This file can be then required in another javascripts. 
 
-##Usage
+## Usage
 In your `webpack.config.js`
 ```
 var requireAssetsHelper = require("encore-require-assets-helper");
@@ -15,7 +15,7 @@ And in your javascript file, which you are using as Entry in webpack-encore:
 const assets = require(./assets.js) //requires generated file
 ```
 
-##Configuration
+## Configuration
 
 The function has 4 parameters:
 
@@ -24,7 +24,7 @@ The function has 4 parameters:
 * `strip` Optional, removes unwated strings from the path of required files
 * `add` A path prefix for all required files
 
-##Example
+## Example
 
 `webpack.config.js`
 
