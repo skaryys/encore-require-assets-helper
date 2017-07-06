@@ -1,0 +1,13 @@
+{
+  "name": "encore-require-assets-helper",
+  "version": "0.1.0",
+  "description": "Creates js files which requires all files from folder",
+  "main": "index.js",
+  "repository": "https://github.com/skaryys/encore-require-assets-helper.git",
+  "author": "Martin Škára <martin.skara@hendur.eu>(http://hendur.eu)",
+  "license": "MIT",
+  "devDependencies": {
+    "glob": "^7.1.2",
+    "path": "^0.12.7"
+  }
+}
