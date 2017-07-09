@@ -15,7 +15,7 @@ module.exports = function(from,to,strip,add) {
         var helper2 = helper.replace(/-/g,"");
         var name = helper2.match("[^/]+$");
         file = file.replace(strip,"");
-        stream.write('const asset-'+ name + ' = require("'+ add + file+'");\n');
+        stream.write('const asset_'+ name + ' = require("'+ add + file+'");\n');
     });
     stream.end();
 };
