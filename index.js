@@ -11,11 +11,9 @@ module.exports = function(from,to,strip,add) {
     }
     var stream = fs.createWriteStream(to);
     glob.sync(from).forEach( function( file ) {
-        var helper = file.replace(/\.[^/.]+$/, "");
-        var helper2 = helper.replace(/-/g,"");
-        var name = helper2.match("[^/]+$");
+        var hashed = Math.random().toString(36).substring(7);
         file = file.replace(strip,"");
-        stream.write('const asset_'+ name + ' = require("'+ add + file+'");\n');
+        stream.write('const asset_a'+ hashed + ' = require("'+ add + file+'");\n');
     });
     stream.end();
 };
