@@ -12,7 +12,8 @@ requireAssetsHelper(from,to,strip,add);
 And in your javascript file, which you are using as Entry in webpack-encore:
 
 ```
-const assets = require(./assets.js) //requires generated file
+//requires generated file
+const assets = require("./assets.js");
 ```
 
 ## Configuration
