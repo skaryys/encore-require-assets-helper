@@ -1,9 +1,9 @@
 # encore-require-assets-helper
 
-Creates .js file which requires all suitable files in folder. This file can be then required in another javascripts. 
+Creates .js file, which you can require in your js entry which you use in your [@symfony/webpack-encore](https://github.com/symfony/webpack-encore) config.
 
 ## Usage
-In your `webpack.config.js`
+Create file `assets.config.js`
 ```
 var requireAssetsHelper = require("encore-require-assets-helper");
 requireAssetsHelper(from,to,strip,add);
@@ -16,6 +16,16 @@ And in your javascript file, which you are using as Entry in webpack-encore:
 const assets = require("./assets.js");
 ```
 
+Then run:
+
+```
+node assets.config.js
+```
+
+You should run this every time you add some images to your project.
+
+> In older versions of this package, It was recommended to write the requireAssetsHelper function inside the webpack.config.js. You can do it even now, but if you  run encore with watch, it can be really slow, depending on amount and size of your images. The problem is mentioned [here](https://github.com/skaryys/encore-require-assets-helper/issues/1).
+
 ## Configuration
 
 The function has 4 parameters:
@@ -27,24 +37,25 @@ The function has 4 parameters:
 
 ## Example
 
-`webpack.config.js`
+`assets.config.js`
 
 ```
-var Encore = require('@symfony/webpack-encore');
 var requireAssetsHelper = require("encore-require-assets-helper");
 
 requireAssetsHelper(
-    "./web/assets/img/**/*.{jpg,jpeg,png,gif,svg,ico}",
-    "./web/assets/js/assets.js",
-    "./web/assets/",
-    "../"
+    "./assets/images/**/*.{jpg,jpeg,png,gif,svg,ico}",
+    "./assets/js/assets.js",
+    "",
+    "../../"
 );
+```
 
+`webpack.config.js`
+
+```
 Encore
     ...
     .addEntry('app', './web/assets/js/main.js')
-    .addStyleEntry('main', './web/assets/styles/main.sass')
-    .enableVersioning()
     ...
 ;
 
