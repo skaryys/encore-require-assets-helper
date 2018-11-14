@@ -1,6 +1,6 @@
-<div class="alert alert-danger" role="alert" style="margin-top: 1rem;color:#721c24;background-color:#f8d7da;border-color:#f5c6cb;position:relative;padding:.75rem 1.25rem;margin-bottom: 1rem;    border: 1px solid transparent;border-radius: .25rem;">
-  Package is deprecated, work can be done without him thanks to [@symfony/webpack-encore](https://github.com/symfony/webpack-encore) 0.21+.
-</div>
+<span style="color:#721c24;">
+  Package is deprecated, work can be done without him thanks to @symfony/webpack-encore 0.21+.
+</span>
 
 # encore-require-assets-helper
 
