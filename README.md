@@ -1,6 +1,5 @@
-```diff
-- Package is deprecated, work can be done without him thanks to [@symfony/webpack-encore](https://github.com/symfony/webpack-encore) 0.21+.
-```
+> Package is deprecated, work can be done without him thanks to [@symfony/webpack-encore](https://github.com/symfony/webpack-encore) 0.21+.
+
 
 # encore-require-assets-helper
 
